@@ -1,5 +1,5 @@
 import "./style.scss";
-import { process } from "./videoProcess";
+import { pipe } from "./pipe";
 
 const appRef = document.querySelector<HTMLDivElement>("#app")!;
 const openCVRef = document.querySelector<HTMLDivElement>("#openCv")!;
@@ -64,7 +64,7 @@ window.addEventListener("load", async () => {
         // start processing.
         capCv.read(srcMat);
 
-        process({ cv, srcMat, dstMat, width, height });
+        pipe({ cv, srcMat, dstMat, width, height });
 
         cv.imshow(out1Ref, dstMat);
 
