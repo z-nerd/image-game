@@ -13,7 +13,7 @@ export const process = ({ cv, srcMat, dstMat }: ProcessProps) => {
   for (let i = 0; i < 256; i++) {
     // lut.data[i] = Math.min(255, i + 127); // Increase brightness
     // lut.data[i] = Math.max(0, i - 127); // Decrease brightness
-    lut.data[i] = i - 100; // Increase brightness
+    lut.data[i] = i - 50; // Increase brightness
   }
 
   cv.LUT(srcMat, lut, dstMat);
