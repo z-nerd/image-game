@@ -15,6 +15,10 @@
     </div>
 
     <script type="module" src="./src/main.ts"></script>
-    <script async src="./public/opencv.js"></script>
+    <script
+      async
+      src="opencv.js"
+      onerror="this.src='public/opencv.js'"
+    ></script>
   </body>
 </html>
